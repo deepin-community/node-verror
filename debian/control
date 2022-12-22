@@ -1,0 +1,35 @@
+Source: node-verror
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-assert-plus <!nocheck>
+ , node-extsprintf <!nocheck>
+ , node-core-util-is <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-verror
+Vcs-Git: https://salsa.debian.org/js-team/node-verror.git
+Homepage: https://github.com/davepacheco/node-verror
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-verror
+Architecture: all
+Depends: ${misc:Depends}
+ , node-assert-plus
+ , node-core-util-is
+ , node-extsprintf
+ , nodejs
+Description: rich JavaScript errors
+ This module provides several classes in support of Joyent's Best Practices
+ for Error Handling in Node.js.
+ .
+ The error classes here support:
+  * printf-style arguments for the message
+  * chains of causes
+  * properties to provide extra information about the error
+  * creating your own subclasses that support all of these
+ .
+ Node.js is an event-based server-side JavaScript engine.

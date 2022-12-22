@@ -1,0 +1,35 @@
+node-verror (1.10.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Trim trailing whitespace.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Remove constraints unnecessary since stretch:
+    + node-verror: Drop versioned constraint on node-core-util-is in Depends.
+  * Bump debhelper from old 12 to 13.
+
+  [ Yadd ]
+  * Declare compliance with policy 4.6.0
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Fix GitHub tags regex
+  * Use dh-sequence-nodejs auto install
+  * Enable upstream test
+  * Install examples
+
+ -- Yadd <yadd@debian.org>  Mon, 11 Oct 2021 19:21:44 +0200
+
+node-verror (1.10.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #861799)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 04 May 2017 13:06:06 +0530

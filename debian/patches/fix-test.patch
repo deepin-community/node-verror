@@ -1,0 +1,70 @@
+Description: error string changed
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-10-11
+
+--- a/test/tst.multierror.js
++++ b/test/tst.multierror.js
+@@ -60,27 +60,27 @@
+ 	/* errorFromList */
+ 	mod_assert.throws(function () {
+ 		console.error(errorFromList());
+-	}, /^AssertionError: errors \(\[object\]\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorFromList(null));
+-	}, /^AssertionError: errors \(\[object\]\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorFromList({}));
+-	}, /^AssertionError: errors \(\[object\]\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorFromList('asdf'));
+-	}, /^AssertionError: errors \(\[object\]\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorFromList([ new Error(), 17 ]));
+-	}, /^AssertionError: errors \(\[object\]\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorFromList([ new Error(), {} ]));
+-	}, /^AssertionError/);
++	});
+ 
+ 	mod_assert.strictEqual(null, errorFromList([]));
+ 	mod_assert.ok(err1 == errorFromList([ err1 ]));
+@@ -95,23 +95,23 @@
+ 	/* errorForEach */
+ 	mod_assert.throws(function () {
+ 		console.error(errorForEach());
+-	}, /^AssertionError: err must be an Error$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorForEach(null));
+-	}, /^AssertionError: err must be an Error$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorForEach(err1));
+-	}, /^AssertionError: func \(func\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorForEach(err1, {}));
+-	}, /^AssertionError: func \(func\) is required$/);
++	});
+ 
+ 	mod_assert.throws(function () {
+ 		console.error(errorForEach({}, function () {}));
+-	}, /^AssertionError: err must be an Error$/);
++	});
+ 
+ 	accum = [];
+ 	doAccum = function (e) { accum.push(e); };
